@@ -1,0 +1,16 @@
+<tr *ngIf="panierItem">
+  <td>
+    <button routerLink="/detail/{{panierItem.product.id}}">
+      <img src="{{panierItem.product.thumbnail}}" class="avatar" alt="Avatar">
+      <p>{{panierItem.product.title}}</p>
+    </button>
+  </td>
+  <td>MAD{{panierItem.product.price}}</td>
+  <td>{{panierItem.quantity}}</td>
+  <td>
+    <button class="btn btn-danger" title="Delete" data-toggle="tooltip"
+            (click)="removeFromCart(panierItem.product)">
+      Remove
+    </button>
+  </td>
+</tr>
